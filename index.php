@@ -89,7 +89,7 @@ $app->post('/:booking_number', function ($booking_number) use ($app, $settings) 
     } catch(Stripe_CardError $e) {
         $body = $e->getJsonBody();
 
-        $this->flash('error', $body['error']['message']);
+        $app->flash('error', $body['error']['message']);
 
         $app->redirect('/' . $booking_number);
     }
