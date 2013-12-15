@@ -275,11 +275,11 @@ input[type=text]:focus {
 }
 #booking_number {
   float: left;
-  width: 178px;
+  width: 158px;
 }
 #booking_number + button {
   float: right;
-  width: 112px;
+  width: 102px;
 }
 input[type=checkbox] {
   float: left;
@@ -344,7 +344,6 @@ button:disabled {
 }
 #lookup {
   background-color: #f0f0f5;
-  width: 320px;
 }
 footer {
   color: #a0a0aa;
@@ -376,5 +375,6 @@ footer img {
   }
   #secondary {
     float: right;
+    width: 320px;
   }
 }
