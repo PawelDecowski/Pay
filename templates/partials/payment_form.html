@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    Stripe.setPublishableKey('{{ settings.stripe_publishable_key }}');
+</script>
+
+<section id="payment">
+    <h2>Payment is due now</h2>
+
+    <form method="POST" action="">
+        <ol>
+            <li>
+                <label for="cc_number">Card number</label>
+                <input type="text" id="cc_number" data-stripe="number">
+            </li>
+
+            <li>
+                <label for="cc_csc">Card security code</label>
+                <input type="text" length="4" id="cc_csc" data-stripe="cvc">
+            </li>
+
+            <li>
+                <label for="cc_exp_month">Expiry date</label>
+                <input type="text" length="2" id="cc_exp_month" data-stripe="exp-month" placeholder="MM"> <span class="separator">/</span> <input type="text" length="4" id="cc_exp_year" data-stripe="exp-year" placeholder="YYYY">
+            </li>
+
+            <li class="checkbox">
+                <input type="checkbox" id="terms" name="terms" value="signed">
+                <label for="terms">I have read and agree to the <a href="http://www.pawelphotographerlondon.co.uk/Terms">Terms and Conditions</a></label>
+            </li>
+
+            <li class="submit">
+                {% if flash.error %}
+                    <strong class="payment-errors">{{ flash.error }}</strong>
+                {% endif %}
+
+                <button type="submit" class="secure">Pay securely</button>
+            </li>
+        </ol>
+    </form>
+</section>

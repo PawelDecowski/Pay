@@ -1,0 +1,380 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  color: #0083b5;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "myriad-pro", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+}
+section {
+  margin: 0 auto;
+  margin-bottom: 26px;
+  padding: 13px;
+  width: 294px;
+}
+.highlight {
+  background-color: #b5eaff;
+}
+.highlight h2 {
+  background-color: #82dcff;
+  color: #004b68;
+  margin: -13px 0 13px -13px;
+  padding: 13px 0;
+  width: 320px;
+}
+.info {
+  background-color: #cfc;
+  color: #252;
+  font-size: 13.5px;
+  margin-bottom: 26px;
+  padding: 13px;
+}
+.info a {
+  color: #000;
+}
+.success {
+  background-color: #cfc;
+  color: #252;
+}
+.success p {
+  margin-bottom: 26px;
+}
+.success p:last-child {
+  margin-bottom: 0;
+}
+.wrapper > .success {
+  text-align: center;
+}
+#logo {
+  display: block;
+  margin: 26px auto 52px;
+}
+h1 {
+  font-size: 56px;
+  line-height: 52px;
+  margin-bottom: 52px;
+  text-align: center;
+}
+h2 {
+  font-size: 27px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+dl {
+  background-color: #b5eaff;
+  overflow: hidden;
+}
+dt {
+  color: #1f87af;
+  clear: left;
+  float: left;
+}
+dt strong {
+  display: block;
+  margin-top: 20px;
+}
+dd {
+  color: #004b68;
+  float: right;
+}
+dd strong {
+  display: block;
+  font-size: 36px;
+  line-height: 52px;
+}
+.list {
+  list-style: disc;
+  padding-left: 20px;
+}
+#payment {
+  background-color: #f0f0f5;
+}
+form li {
+  min-height: 78px;
+}
+form li.submit {
+  min-height: 0;
+}
+form li.checkbox label {
+  display: inline;
+  font-size: 12.06px;
+}
+.payment-errors {
+  background-color: #d44;
+  color: #fff;
+  display: block;
+  font-size: 12.6px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+label {
+  display: block;
+  font-size: 15.299999999999999px;
+  font-weight: 400;
+}
+input[type=text] {
+  background-color: #e5e5ea;
+  border: none;
+  border-radius: 0;
+  color: #555;
+  display: inline-block;
+  font-family: "myriad-pro", sans-serif;
+  font-size: 20.7px;
+  font-weight: 300;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 13px;
+}
+input[type=text]:focus {
+  background-color: #fff;
+  outline: 1px solid #0095ce;
+}
+#cc_number {
+  width: 270px;
+}
+#cc_csc {
+  width: 50px;
+}
+#cc_exp_month {
+  width: 40px;
+}
+#cc_exp_year {
+  width: 50px;
+}
+#booking_number {
+  float: left;
+  width: 178px;
+}
+#booking_number + button {
+  float: right;
+  width: 112px;
+}
+input[type=checkbox] {
+  float: left;
+  margin: 8px 8px 0 0;
+}
+button {
+  background-color: #0095ce;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 13px 26px;
+  font-family: "myriad-pro", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+button.secure {
+  background: url(/images/padlock.png) 24px 12px no-repeat;
+  background-size: 20px 24px;
+  padding-left: 56px !important;
+  background-color: #ffa000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 13px 26px;
+  font-family: "myriad-pro", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+button.secure:hover,
+button.secure:focus {
+  background-color: #ffb333;
+  outline: none;
+}
+button.secure:active {
+  background-color: #e69000;
+  outline: none;
+}
+button.secure:disabled {
+  background-color: #a0a0a5;
+  cursor: wait;
+}
+button:hover,
+button:focus {
+  background-color: #02b9ff;
+  outline: none;
+}
+button:active {
+  background-color: #0083b5;
+  outline: none;
+}
+button:disabled {
+  background-color: #a0a0a5;
+  cursor: wait;
+}
+#lookup {
+  background-color: #f0f0f5;
+  width: 320px;
+}
+footer {
+  color: #a0a0aa;
+  clear: both;
+  font-size: 12.6px;
+  padding: 52px 0;
+  text-align: center;
+}
+footer img {
+  margin-left: 4px;
+  vertical-align: bottom;
+}
+@media screen and (min-width: 320px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 320px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 20px;
+    width: 666px;
+  }
+  #primary {
+    float: left;
+    width: 320px;
+  }
+  #secondary {
+    float: right;
+  }
+}

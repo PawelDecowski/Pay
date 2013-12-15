@@ -1,0 +1,9 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "gabordemooij/redbean": "dev-master",
+        "stripe/stripe-php": "dev-master",
+        "twig/twig": "1.*",
+        "slim/views": "0.1.*"
+    }
+}

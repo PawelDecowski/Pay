@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment — Pawel Photographer London</title>
+
+    <link rel="stylesheet" href="/css/pay.css">
+    <link rel="icon" type="image/png" href="images/pawelphotographerlondon-logo.png">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    <script type="text/javascript" src="/js/pay-ck.js"></script>
+
+    <script type="text/javascript" src="//use.typekit.net/xev7mhh.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+    <div class="wrapper">
+        <img id="logo" src="/images/pawelphotographerlondon-logo.png" width="78" height="78" alt="Pawel Photographer London">
+        
+        {% block content %}{% endblock %}
+
+        <footer>
+            Made by <a href="http://relish.io"><img src="/images/relish.png" width="57" height="26" alt="Relish"></a>
+        </footer>
+    </div>
+</body>
+</html>

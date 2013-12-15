@@ -1,0 +1,290 @@
+@import "reset.less";
+
+@base-line-height: 26px;
+@half-line-height: @base-line-height / 2;
+@base-font-size: 18px;
+@font-family: "myriad-pro", sans-serif;
+
+a {
+    color: darken(#0095ce, 5%);
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: @font-family;
+    font-size: @base-font-size;
+    font-weight: 300;
+    line-height: @base-line-height;
+}
+
+section {
+    margin: 0 auto;
+    margin-bottom: @base-line-height;
+    padding: @base-line-height / 2;
+    width: 320px - @base-line-height;
+}
+
+.highlight {
+    background-color: lighten(#0095ce, 45%);
+
+    h2 {
+        background-color: lighten(#0095ce, 35%);
+        color: darken(#0095ce, 20%);
+        margin: -@half-line-height 0 @half-line-height -@half-line-height;
+        padding: @base-line-height / 2 0;
+        width: 320px;
+    }
+}
+
+.info {
+    background-color: #cfc;
+    color: #252;
+    font-size: @base-font-size * .75;
+    margin-bottom: @base-line-height;
+    padding: @base-line-height / 2;
+    
+    a {
+        color: #000;
+    }
+}
+
+.success {
+    background-color: #cfc;
+    color: #252;
+
+    p {
+        margin-bottom: @base-line-height;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.wrapper > .success {
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    margin: @base-line-height auto @base-line-height * 2;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 2 * @base-line-height;
+    margin-bottom: @base-line-height * 2;
+    text-align: center;
+}
+
+h2 {
+    font-size: @base-font-size * 1.5;
+    margin-bottom: @base-line-height;
+    text-align: center;
+}
+
+dl {
+    background-color: lighten(#0095ce, 45%);
+    overflow: hidden;
+}
+
+dt {
+    color: desaturate(#0095ce, 30%);
+    clear: left;
+    float: left;
+
+    strong {
+        display: block;
+        margin-top: @base-line-height - 6px;
+    }
+}
+
+dd {
+    color: darken(#0095ce, 20%);
+    float: right;
+
+    strong {
+        display: block;
+        font-size: @base-font-size * 2;
+        line-height: @base-line-height * 2;
+    }
+}
+
+.list {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+#payment {
+    background-color: #f0f0f5;
+}
+
+form {
+    li {
+        min-height: @base-line-height * 3;
+
+        &.submit {
+            min-height: 0;
+        }
+
+        &.checkbox label {
+            display: inline;
+            font-size: @base-font-size * .67;
+        }
+    }
+}
+
+.payment-errors {
+    background-color: #d44;
+    color: #fff;
+    display: block;
+    font-size: @base-font-size * .7;
+    margin-bottom: @base-line-height;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: @base-font-size * 0.85;
+    font-weight: 400;
+}
+
+input[type=text] {
+    background-color: #e5e5ea;
+    border: none;
+    border-radius: 0;
+    color: #555;
+    display: inline-block;
+    font-family: @font-family;
+    font-size: @base-font-size * 1.15;
+    font-weight: 300;
+    height: @base-line-height;
+    line-height: @base-line-height;
+    margin: 0;
+    padding: @base-line-height / 2;
+
+    &:focus {
+        background-color: #fff;
+        outline: 1px solid #0095ce;
+    }
+}
+
+#cc_number {
+    width: 270px;
+}
+
+#cc_csc {
+    width: 50px;
+}
+
+#cc_exp_month {
+    width: 40px;
+}
+
+#cc_exp_year {
+    width: 50px;
+}
+
+#booking_number {
+    float: left;
+    width: 178px;
+
+    + button {
+        float: right;
+        width: 112px;
+    }
+}
+
+input[type=checkbox] {
+    float: left;
+    margin: 8px 8px 0 0;
+}
+
+.button() {
+    background-color: @button-color;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: @base-line-height / 2 @base-line-height;
+    font-family: @font-family;
+    font-size: @base-font-size;
+    line-height: @base-line-height;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+        background-color: lighten(@button-color, 10%);
+        outline: none;
+    }
+
+    &:active {
+        background-color: darken(@button-color, 5%);
+        outline: none;
+    }
+
+    &:disabled {
+        background-color: #a0a0a5;
+        cursor: wait;
+    }
+}
+
+button {
+    @button-color: #0095ce;
+
+    &.secure {
+        @button-color: #ffa000;
+        background: url(/images/padlock.png) 24px 12px no-repeat;
+        background-size: 20px 24px;
+        padding-left: 56px !important;
+
+        .button();
+    }
+
+    .button();
+}
+
+#lookup {
+    background-color: #f0f0f5;
+    width: 320px;
+}
+
+footer {
+    color: #a0a0aa;
+    clear: both;
+    font-size: @base-font-size * .7;
+    padding: @base-line-height * 2 0;
+    text-align: center;
+
+    img {
+        margin-left: 4px;
+        vertical-align: bottom;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    .wrapper {
+        margin: 0 auto;
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .wrapper {
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0 20px;
+        width: 640px + @base-line-height;
+    }
+
+    #primary {
+        float: left;
+        width: 320px;
+    }
+
+    #secondary {
+        float: right;
+    }
+}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello, <em>{{ booking.first_name }}<em></h1>
+
+<div id="primary">
+    <section class="highlight">
+        <h2>Your reservation</h2>
+        
+        <dl>
+            <dt>Booking number</dt>
+            <dd>{{ booking.number }}</dd>
+
+            <dt>Job type</dt>
+            <dd>{{ booking.job_type }}</dd>
+
+            <dt>Date</dt>
+            <dd>{{ booking.date|date("d/m/Y") }}</dd>
+
+            <dt>Time</dt>
+            <dd>{{ booking.date|date("H:i") }}</dd>
+
+            <dt><strong>Amount</strong></dt>
+            <dd><strong>£{{ booking.amount|number_format("2") }}</strong></dt>
+        </dl>
+    </section>
+
+    {% if booking.amount > booking.amount_paid %}
+    <section class="info">
+        <ul class="list">
+            <li>Your payment data is encrypted and securely processed by <a href="http://stripe.com">Stripe</a>.</li>
+            <li>We do not store your card details after the payment has been processed.</p></li>
+            <li>On your statement the payment will appear as Relish Media Ltd.</li>
+        </ul>
+    </section>
+    {% endif %}
+</div>
+
+<div id="secondary">
+    {% if booking.amount > booking.amount_paid %}
+        {% include 'partials/payment_form.html' %}
+    {% else %}
+        {% include 'partials/payment_receipt.html' %}
+    {% endif %}
+</div>
+{% endblock %}
