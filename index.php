@@ -69,7 +69,7 @@ $app->post('/:booking_number', function ($booking_number) use ($app, $settings) 
         $app->redirect('/' . $booking_number);
     }
 
-    if (!$app->request->get('terms')) {
+    if (!$app->request->post('terms')) {
         $app->flash('error', 'You have to agree to the Terms & Conditions');
         
         $app->redirect('/' . $booking_number);
