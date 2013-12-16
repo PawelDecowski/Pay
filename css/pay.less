@@ -147,7 +147,7 @@ label {
     font-weight: 400;
 }
 
-input[type=text] {
+input[type=text], input[type=number] {
     background-color: #e5e5ea;
     border: none;
     border-radius: 0;
@@ -165,6 +165,12 @@ input[type=text] {
         background-color: #fff;
         outline: 1px solid #0095ce;
     }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #cc_number {

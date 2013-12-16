@@ -1,4 +1,8 @@
 $(function() {
+    $('input[type=number]').bind('mousewheel', function(e) {
+        e.preventDefault();
+    });
+
     $('#lookup form').submit(function(event) {
         event.preventDefault();
         window.location = '/' + $('#booking_number').val().toUpperCase();

@@ -241,7 +241,8 @@ label {
   font-size: 15.299999999999999px;
   font-weight: 400;
 }
-input[type=text] {
+input[type=text],
+input[type=number] {
   background-color: #e5e5ea;
   border: none;
   border-radius: 0;
@@ -255,9 +256,15 @@ input[type=text] {
   margin: 0;
   padding: 13px;
 }
-input[type=text]:focus {
+input[type=text]:focus,
+input[type=number]:focus {
   background-color: #fff;
   outline: 1px solid #0095ce;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 #cc_number {
   width: 270px;

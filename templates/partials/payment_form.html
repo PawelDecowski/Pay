@@ -9,17 +9,17 @@
         <ol>
             <li>
                 <label for="cc_number">Card number</label>
-                <input type="text" id="cc_number" data-stripe="number">
+                <input type="number" id="cc_number" data-stripe="number">
             </li>
 
             <li>
                 <label for="cc_csc">Card security code</label>
-                <input type="text" length="4" id="cc_csc" data-stripe="cvc">
+                <input type="number" length="4" id="cc_csc" data-stripe="cvc">
             </li>
 
             <li>
                 <label for="cc_exp_month">Expiry date</label>
-                <input type="text" length="2" id="cc_exp_month" data-stripe="exp-month" placeholder="MM"> <span class="separator">/</span> <input type="text" length="4" id="cc_exp_year" data-stripe="exp-year" placeholder="YYYY">
+                <input type="number" length="2" id="cc_exp_month" data-stripe="exp-month" placeholder="MM"> <span class="separator">/</span> <input type="number" length="4" id="cc_exp_year" data-stripe="exp-year" placeholder="YYYY">
             </li>
 
             <li class="checkbox">
