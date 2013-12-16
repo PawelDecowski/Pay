@@ -166,15 +166,13 @@ section {
 .success {
   background-color: #cfc;
   color: #252;
+  text-align: center;
 }
 .success p {
   margin-bottom: 26px;
 }
 .success p:last-child {
   margin-bottom: 0;
-}
-.wrapper > .success {
-  text-align: center;
 }
 #logo {
   display: block;

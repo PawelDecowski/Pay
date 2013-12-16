@@ -26,6 +26,7 @@ $(function() {
             return;
         }
 
+        $('body').css('cursor', 'wait');
         $form.find('button').prop('disabled', true);
 
         Stripe.card.createToken($form, stripeResponseHandler);
@@ -36,6 +37,7 @@ $(function() {
 
         if (response.error) {
             show_error(response.error.message);
+            $('body').css('cursor', '');
             $form.find('button').prop('disabled', false);
         } else {
             var token = response.id;

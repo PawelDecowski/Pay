@@ -20,6 +20,13 @@ $app->get('/', function() use ($app) {
 });
 
 $app->get('/success', function() use ($app) {
+    $flash = $app->view()->getData('flash');
+    $booking = $flash['booking'];
+
+    if ($booking === NULL) {
+        $app->redirect('/');
+    }
+
     $app->render('success.html');
 });
 
