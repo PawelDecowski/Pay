@@ -23,7 +23,7 @@
             _gaq.push(['_setAccount', '{{ settings.ga_tracking_id }}']);
             {% if settings.ga_domain_name %}
                 _gaq.push(['_setDomainName', '{{ settings.ga_domain_name }}']);
-            {%endif %}
+            {% endif %}
             _gaq.push(['_trackPageview']);
 
             (function() {

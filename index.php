@@ -15,11 +15,11 @@ $app = new \Slim\Slim(array(
                         'templates.path' => $settings->templates_path
                     ));
 
-$app->get('/', function() use ($app) {
-    $app->render('index.html');
+$app->get('/', function() use ($app, $settings) {
+    $app->render('index.html', compact('settings'));
 });
 
-$app->get('/success', function() use ($app) {
+$app->get('/success', function() use ($app, $settings) {
     $flash = $app->view()->getData('flash');
     $booking = $flash['booking'];
 
@@ -27,7 +27,7 @@ $app->get('/success', function() use ($app) {
         $app->redirect('/');
     }
 
-    $app->render('success.html');
+    $app->render('success.html', compact('settings'));
 });
 
 $app->post('/booking', function () use ($app, $settings) {
@@ -62,7 +62,7 @@ $app->get('/:booking_number', function ($booking_number) use ($app, $settings) {
     $booking = R::findOne('booking', ' number = ? ORDER BY date', array($booking_number));
 
     if (!$booking) {
-        $app->render('not_found.html', compact('booking_number'), 404);
+        $app->render('not_found.html', compact('booking_number', 'settings'), 404);
         return;
     }
 
@@ -111,8 +111,8 @@ $app->post('/:booking_number', function ($booking_number) use ($app, $settings) 
     $app->redirect('/success');
 });
 
-$app->notFound(function () use ($app) {
-    $app->render('404.html');
+$app->notFound(function () use ($app, $settings) {
+    $app->render('404.html', compact('settings'));
 });
 
 $app->run();
