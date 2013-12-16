@@ -102,7 +102,7 @@ $app->post('/:booking_number', function ($booking_number) use ($app, $settings) 
     }
 
     $booking->amount_paid = $booking->amount;
-    $booking->terms = $app->request->get('terms');
+    $booking->terms = $app->request->post('terms');
 
     R::store($booking);
 
