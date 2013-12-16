@@ -15,11 +15,11 @@ $app = new \Slim\Slim(array(
                         'templates.path' => $settings->templates_path
                     ));
 
-$app->get('/', function() use ($app) {
+$app->get('/', function() use ($app, $settings) {
     $app->render('index.html');
 });
 
-$app->get('/success', function() use ($app) {
+$app->get('/success', function() use ($app, $settings) {
     $flash = $app->view()->getData('flash');
     $booking = $flash['booking'];
 
@@ -111,7 +111,7 @@ $app->post('/:booking_number', function ($booking_number) use ($app, $settings) 
     $app->redirect('/success');
 });
 
-$app->notFound(function () use ($app) {
+$app->notFound(function () use ($app, $settings) {
     $app->render('404.html');
 });
 
