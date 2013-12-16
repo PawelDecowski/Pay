@@ -1,7 +1,7 @@
 $(function() {
-    $('input[type=number]').bind('mousewheel', function(e) {
-        e.preventDefault();
-    });
+    if ($('body').width() > 320) {
+        $('input[type=number]').prop('type', 'text');
+    }
 
     $('#lookup form').submit(function(event) {
         event.preventDefault();
