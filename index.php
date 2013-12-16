@@ -48,11 +48,11 @@ $app->post('/booking', function () use ($app, $settings) {
 });
 
 $app->get('/:booking_number', function ($booking_number) use ($app, $settings) {
-    $booking = R::findOne('booking', ' number = ? ORDER BY date', array($booking_number));
-
     if (!preg_match('/^[A-Z0-9]+$/', $booking_number)) {
         $app->redirect('/' . strtoupper($booking_number));
     }
+
+    $booking = R::findOne('booking', ' number = ? ORDER BY date', array($booking_number));
 
     if (!$booking) {
         $app->render('not_found.html', compact('booking_number'), 404);
@@ -60,7 +60,7 @@ $app->get('/:booking_number', function ($booking_number) use ($app, $settings) {
     }
 
     $app->render('booking.html', compact('booking', 'settings'));
-})->conditions(array('booking_number' => '[A-Za-z0-9]{2,}'));;
+})->conditions(array('booking_number' => '[A-Za-z0-9]+'));;
 
 $app->post('/:booking_number', function ($booking_number) use ($app, $settings) {
     $booking = R::findOne('booking', ' number = ? ORDER BY date', array($booking_number));
