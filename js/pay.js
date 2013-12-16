@@ -1,5 +1,4 @@
 $(function() {
-    console.log(navigator.userAgent);
     if (navigator.userAgent.indexOf('Chrome/') != -1) {
         $('input[type=number]').prop('type', 'text');
     }
